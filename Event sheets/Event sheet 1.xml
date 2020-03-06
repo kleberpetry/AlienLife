@@ -13,6 +13,14 @@
                     <param id="0" name="Pin to">heroi</param>
                     <param id="1" name="Mode">0</param>
                 </action>
+                <action id="-4" name="Set position to another object" sid="167743158948292" type="heroanimation">
+                    <param id="0" name="Object">heroi</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="372480994091964" type="heroanimation">
+                    <param id="0" name="Pin to">heroi</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="192046475997422">

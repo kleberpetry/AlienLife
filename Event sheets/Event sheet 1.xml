@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
+        <variable constant="0" name="vida" sid="607872262079059" static="0" type="number">3</variable>
         <variable constant="0" name="pontos" sid="942281339165201" static="0" type="number">0</variable>
         <event-block sid="889160459549082">
             <conditions>
@@ -21,6 +22,10 @@
                     <param id="0" name="Pin to">heroi</param>
                     <param id="1" name="Mode">0</param>
                 </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="459008369661183" type="coracao">
+                    <param id="0" name="Pin to">heroi</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="192046475997422">
@@ -30,7 +35,10 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Destroy" sid="232761828053080" type="inimigo" />
+                <action id="-11" name="Subtract from" sid="101678014623666" type="System">
+                    <param id="0" name="Variable">vida</param>
+                    <param id="1" name="Value">1</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="216468197113605">
@@ -56,6 +64,107 @@
             <actions>
                 <action id="0" name="Set text" sid="449033274192368" type="placar">
                     <param id="0" name="Text">&quot;Pontos: &quot;&amp;pontos</param>
+                </action>
+                <action id="5" name="Set frame" sid="617857464312593" type="coracao">
+                    <param id="0" name="Frame number">vida</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="843457368285124">
+            <conditions>
+                <condition behavior="Platform" id="0" name="Is moving" sid="276772218879940" type="heroi" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="889090273698562" type="heroanimation">
+                    <param id="0" name="Animation">&quot;andando&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="564657717053484">
+            <conditions>
+                <condition id="-22" name="Else" sid="760471342421649" type="System" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="634964498057831" type="heroanimation">
+                    <param id="0" name="Animation">&quot;parado&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="163363043443796">
+            <conditions>
+                <condition behavior="Platform" id="3" name="Is jumping" sid="783282871697752" type="heroi" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="217642481748088" type="heroanimation">
+                    <param id="0" name="Animation">&quot;pulando&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="516196697570561">
+            <conditions>
+                <condition behavior="Platform" id="4" name="Is falling" sid="183049146814461" type="heroi" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="729973716371547" type="heroanimation">
+                    <param id="0" name="Animation">&quot;caindo&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="442997588522275">
+            <conditions>
+                <condition id="2" name="Key is down" sid="105150401218393" type="Keyboard">
+                    <param id="0" name="Key">39</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="858333441201144" type="heroanimation">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="995765399013630">
+            <conditions>
+                <condition id="2" name="Key is down" sid="946712757378924" type="Keyboard">
+                    <param id="0" name="Key">37</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="251591178281547" type="heroanimation">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="829088269531991">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="213520169906947" type="System">
+                    <param id="0" name="Variable">vida</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="161534388361256" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action id="-26" name="Restart layout" sid="836125797944638" type="System" />
+                <action id="-21" name="Reset global variables" sid="216013106834659" type="System" />
+            </actions>
+        </event-block>
+        <event-block sid="715626674414240">
+            <conditions>
+                <condition id="-2" name="Compare Y" sid="562908312791612" type="heroi">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="Y co-ordinate">600</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="704110265185157" type="System">
+                    <param id="0" name="Variable">vida</param>
+                    <param id="1" name="Value">0</param>
                 </action>
             </actions>
         </event-block>

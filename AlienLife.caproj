@@ -13,11 +13,13 @@
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
@@ -64,27 +66,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="base" sid="755653995182097">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Solid" sid="302438131603798">
-                    <behavior id="solid" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="792738549338996" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="inimigo" sid="347195414200133">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="346053633596638" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="moeda" sid="471598852834222">
             <plugin id="Sprite" />
             <behaviors>
@@ -94,7 +75,18 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="960357373094759" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.473684" original-source="C:\Users\kleber4855\Desktop\Sprite\kenney-platformer-art-base-pack\Items\coinGold.png">
+                        <collision-poly>
+                            <point x="0.184211" y="0.157895" />
+                            <point x="0.5" y="0.0526316" />
+                            <point x="0.815789" y="0.157895" />
+                            <point x="0.947368" y="0.473684" />
+                            <point x="0.842105" y="0.815789" />
+                            <point x="0.5" y="0.947368" />
+                            <point x="0.157895" y="0.815789" />
+                            <point x="0.0526316" y="0.473684" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -187,6 +179,134 @@
                     <frame duration="1" hotspotX="0.503067" hotspotY="0.511111" />
                     <frame duration="1" hotspotX="0.503067" hotspotY="0.511111" />
                     <frame duration="1" hotspotX="0.503067" hotspotY="0.511111" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="base_terra" sid="840708207140749">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\kleber4855\Desktop\Sprite\kenney-platformer-art-base-pack\Tiles\grassCenter.png" />
+        </object-type>
+        <object-type name="base_rocha" sid="476525287177603">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\kleber4855\Desktop\Sprite\kenney-platformer-art-base-pack\Tiles\stoneCenter.png" />
+        </object-type>
+        <object-type name="base_terra_fundo" sid="662970329160817">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\kleber4855\Desktop\Sprite\kenney-platformer-art-base-pack\Tiles\grassCenter.png" />
+        </object-type>
+        <object-type name="base_terra_falso" sid="604715204949616">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\kleber4855\Desktop\Sprite\kenney-platformer-art-base-pack\Tiles\grassCenter.png" />
+        </object-type>
+        <object-type name="grama" sid="743737586184066">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid" sid="216967999255210">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="C:\Users\kleber4855\Desktop\Sprite\kenney-platformer-art-base-pack\Tiles\grassHalfMid.png" />
+        </object-type>
+        <object-type name="areia" sid="838695038349929">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\kleber4855\Desktop\Sprite\kenney-platformer-art-base-pack\Tiles\sandHalfMid.png" />
+        </object-type>
+        <object-type name="ponte_madeira" sid="901105349602293">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="966631405408853">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="761219229243993" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.333333" original-source="C:\Users\kleber4855\Desktop\Sprite\kenney-platformer-art-base-pack\Tiles\bridgeLogs.png">
+                        <collision-poly>
+                            <point x="0.694444" y="0.185185" />
+                            <point x="0.5" y="0.037037" />
+                            <point x="0.305556" y="0.185185" />
+                            <point x="0.944444" y="0.851852" />
+                            <point x="0.5" y="0.962963" />
+                            <point x="0.0555556" y="0.851852" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ponte" sid="799536452546144">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="873842649716114" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.636364" original-source="C:\Users\kleber4855\Desktop\Sprite\kenney-platformer-art-base-pack\Tiles\bridge.png">
+                        <collision-poly>
+                            <point x="0.708333" y="0.0454545" />
+                            <point x="0.291667" y="0.0454545" />
+                            <point x="0.958333" y="0.863636" />
+                            <point x="0.5" y="0.954545" />
+                            <point x="0.0416667" y="0.863636" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="tijolao" sid="426094279532175">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="220228987425408" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kleber4855\Desktop\Sprite\kenney-platformer-art-base-pack\Tiles\brickWall.png">
+                        <collision-poly>
+                            <point x="0.0285714" y="0.0285714" />
+                            <point x="0.5" y="0" />
+                            <point x="0.971429" y="0.0285714" />
+                            <point x="1" y="0.5" />
+                            <point x="0.971429" y="0.971429" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0285714" y="0.971429" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="pontona" sid="747308406528101">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\kleber4855\Desktop\Sprite\kenney-platformer-art-base-pack\Tiles\bridgeLogs.png" />
+        </object-type>
+        <object-type name="botao" sid="440656068288904">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="812251428566717" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kleber4855\Desktop\Sprite\kenney-platformer-art-base-pack\Items\buttonRed_pressed.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kleber4855\Desktop\Sprite\kenney-platformer-art-base-pack\Items\buttonRed.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="fogueira" sid="428669925742008">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="desligado" pingpong="0" repeatcount="1" repeatto="0" sid="445839660771138" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kleber4855\Desktop\Sprite\kenney-platformer-art-base-pack\Tiles\torch.png" />
+                </animation>
+                <animation framecount="2" loop="1" name="ligado" pingpong="0" repeatcount="0" repeatto="0" sid="311309610091977" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kleber4855\Desktop\Sprite\kenney-platformer-art-base-pack\Tiles\tochLit.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kleber4855\Desktop\Sprite\kenney-platformer-art-base-pack\Tiles\tochLit2.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ponte_cai" sid="505840808442433">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="231086938992771" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.333333" original-source="C:\Users\kleber4855\Desktop\Sprite\kenney-platformer-art-base-pack\Tiles\bridgeLogs.png">
+                        <collision-poly>
+                            <point x="0.694444" y="0.185185" />
+                            <point x="0.5" y="0.037037" />
+                            <point x="0.305556" y="0.185185" />
+                            <point x="0.944444" y="0.851852" />
+                            <point x="0.5" y="0.962963" />
+                            <point x="0.0555556" y="0.851852" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>

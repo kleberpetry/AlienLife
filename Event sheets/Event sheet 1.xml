@@ -29,11 +29,7 @@
             </actions>
         </event-block>
         <event-block sid="192046475997422">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="284683201389932" type="heroi">
-                    <param id="0" name="Object">inimigo</param>
-                </condition>
-            </conditions>
+            <conditions />
             <actions>
                 <action id="-11" name="Subtract from" sid="101678014623666" type="System">
                     <param id="0" name="Variable">vida</param>
@@ -135,36 +131,6 @@
             <actions>
                 <action id="7" name="Set mirrored" sid="251591178281547" type="heroanimation">
                     <param id="0" name="State">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="829088269531991">
-            <conditions>
-                <condition id="-14" name="Compare variable" sid="213520169906947" type="System">
-                    <param id="0" name="Variable">vida</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">0</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-16" name="Wait" sid="161534388361256" type="System">
-                    <param id="0" name="Seconds">1</param>
-                </action>
-                <action id="-26" name="Restart layout" sid="836125797944638" type="System" />
-                <action id="-21" name="Reset global variables" sid="216013106834659" type="System" />
-            </actions>
-        </event-block>
-        <event-block sid="715626674414240">
-            <conditions>
-                <condition id="-2" name="Compare Y" sid="562908312791612" type="heroi">
-                    <param id="0" name="Comparison">4</param>
-                    <param id="1" name="Y co-ordinate">600</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Set value" sid="704110265185157" type="System">
-                    <param id="0" name="Variable">vida</param>
-                    <param id="1" name="Value">0</param>
                 </action>
             </actions>
         </event-block>
